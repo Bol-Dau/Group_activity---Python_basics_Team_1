@@ -19,20 +19,25 @@ def convert_to_binary(text):
         age_binary = bin(int(text)) #Convert the age to an integer and then the integer to a binary display
         return age_binary
     else:
-        for char in text: #iterating over all characters in the name
-            char = ord(char) #converting the characters in the name to ASCII values
-            name_binary = format(char,'08b') #Converting the ASCII values to binry using the format function and '08b' to ensure that the binary representation is 8 bits long rather than 7
-            name_binary = name_binary =+ " "
-            return name_binary
+        name_binary = ""  
+        # Initialize an empty string to store the binary representation of each character in the name
+        for char in text:  
+            # Loop through each character in the string (assumes this is the user's name)
+            name_binary += format(ord(char), '08b') + " "  
+            # Convert the character to its ASCII value using ord()
+            # Format the ASCII value as an 8-bit binary string using '08b'
+            # Append this binary string to name_binary with a space in between characters
+        return name_binary.strip()  
+        # Return the final binary string, removing any trailing space at the end
 
 
 #Creating the Personalized Messag e
 
 def create_message(name, age, name_binary, age_binary):
     #Combines all details into a full personalized message.
-    message = (f"""
-        Hello {name}, you are {age} years old!\n"
-        Name in binary: {name_binary}\n"
-        Age in binary: {age_binary}"
-    """)
+    message = f"""
+        Hello {name}, you are {age} years old!
+        Name in binary: {name_binary}
+        Age in binary: {age_binary}
+    """
     return message
