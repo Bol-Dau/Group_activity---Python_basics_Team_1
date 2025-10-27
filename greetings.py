@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
 #greetings.py
-#This file defines two simple functions:
-#1. show_intro() — prints the welcome message
-#2. show_exit_message() — prints the goodbye message.
+# A file that contains two functions that for intro and exit message.
+
 
 def show_intro():
     #Display a friendly welcome message.
