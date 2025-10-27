@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from helper_functions import validate_input, create_message, convert_to_binary
 from file_manager import save_message, read_message
 from greetings import show_intro, show_exit_message
