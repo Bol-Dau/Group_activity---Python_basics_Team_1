@@ -23,5 +23,4 @@ if __name__ =='__main__':
     message = create_message()
     save_message()
     read_message()
-    show_exit_message()
-    
+    show_exit_message()    
