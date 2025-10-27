@@ -9,11 +9,12 @@ def get_user_info():
         age = input("Enter your age: ")
         if not validate_input(name):
             print("Invalid input: Please enter a correct name")
-            continue
+            break
+           
         if not age.isdigit():
             print("Invalid age. Please anter a valid age")
-            continue
-    return name, age
+            break
+        return name, age
 
 if __name__ =='__main__':
     show_intro()

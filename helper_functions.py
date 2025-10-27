@@ -8,15 +8,16 @@ def validate_input(user_input):
     return True
 
 def convert_to_binary(text):
-    text = input("Enter your age: ")
     if text.isdigit():
         age_binary = bin(int(text))
-        print(age_binary)
+        return age_binary
     else:
         for char in text:
             char = ord(char)
             name_binary = format(char,'08b')
-            print(name_binary, end=' ')
+            name_binary = name_binary =+ " "
+            return name_binary
+
 
 def create_message(name, age, name_binary, age_binary):
     #Combines all details into a full personalized message.
